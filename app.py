@@ -13,7 +13,7 @@ collection = db["users"]  # Collection name
 # Home Route
 @app.route("/")
 def home():
-    return "Flask App Connected to MongoDB Atlas!"
+    return "Flask App Connected to MongoDB Atlas! Updated"
 
 # Create User (POST)
 @app.route("/add_user", methods=["POST"])
