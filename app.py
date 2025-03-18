@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from pymongo import MongoClient
 import os
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # MongoDB Atlas connection
 MONGO_URI = "mongodb+srv://indrajeet:indu0011@cluster0.qstxp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
@@ -48,5 +48,5 @@ def delete_user():
     else:
         return jsonify({"error": "User not found"}), 404
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     app.run(port=8800,debug=True)
